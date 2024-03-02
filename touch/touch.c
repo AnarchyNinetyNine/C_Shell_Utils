@@ -28,8 +28,10 @@ int main(int argc, char **argv)
 		if ((fd = open(*argv, O_CREAT, 0600)) == -1)
 			printf("./touch: cannot create file '%s'\n", *argv);
 		else
+		{
 			printf("./touch: created file '%s'\n", *argv);
-		close(fd);
+			close(fd);
+		}
 	}
 
 	return (0);
